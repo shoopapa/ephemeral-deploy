@@ -1,0 +1,15 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-c8490260
+spec:
+  rules:
+    - http:
+        paths:
+          - backend:
+              service:
+                name: branch-name-19fced4
+                port:
+                  number: 3000
+            path: /bots/branch-name-19fced4
+            pathType: Prefix
