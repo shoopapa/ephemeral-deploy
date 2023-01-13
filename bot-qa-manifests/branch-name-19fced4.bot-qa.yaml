@@ -28,6 +28,11 @@ spec:
     spec:
       containers:
         - env:
+            - name: AWSUME_PROFILE
+              valueFrom:
+                secretKeyRef:
+                  key: AWSUME_PROFILE
+                  name: aws-env
             - name: AWSUME_EXPIRATION
               valueFrom:
                 secretKeyRef:
