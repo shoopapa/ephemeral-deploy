@@ -13,3 +13,12 @@ spec:
                   number: 3000
             path: /bots/branch-name-19fced4
             pathType: Prefix
+    - http:
+        paths:
+          - backend:
+              service:
+                name: ingress
+                port:
+                  number: 3000
+            path: /bots/ingress
+            pathType: Prefix

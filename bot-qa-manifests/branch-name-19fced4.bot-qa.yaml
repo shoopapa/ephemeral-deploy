@@ -59,7 +59,7 @@ spec:
                   key: AWS_SESSION_TOKEN
                   name: aws-env
           image: 936453233046.dkr.ecr.us-east-1.amazonaws.com/joe:branch-name-19fced4
-          imagePullPolicy: Never
+          imagePullPolicy: Always
           name: branch-name-19fced4
           ports:
             - containerPort: 3000
