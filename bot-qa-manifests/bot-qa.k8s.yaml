@@ -1,30 +1,30 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: test2
+  name: test4
   namespace: default
 spec:
   ports:
     - port: 80
       targetPort: 3000
   selector:
-    app: bot-qa-test2
+    app: bot-qa-test4
   type: LoadBalancer
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: test2
+  name: test4
   namespace: default
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: bot-qa-test2
+      app: bot-qa-test4
   template:
     metadata:
       labels:
-        app: bot-qa-test2
+        app: bot-qa-test4
     spec:
       containers:
         - env:
@@ -58,145 +58,9 @@ spec:
                 secretKeyRef:
                   key: AWS_SESSION_TOKEN
                   name: aws-env
-          image: 936453233046.dkr.ecr.us-east-1.amazonaws.com/joe:test2
+          image: 936453233046.dkr.ecr.us-east-1.amazonaws.com/joe:test4
           imagePullPolicy: Never
-          name: test2
-          ports:
-            - containerPort: 3000
-      imagePullSecrets:
-        - name: aws-creds
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: test3
-  namespace: default
-spec:
-  ports:
-    - port: 80
-      targetPort: 3000
-  selector:
-    app: bot-qa-test3
-  type: LoadBalancer
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: test3
-  namespace: default
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: bot-qa-test3
-  template:
-    metadata:
-      labels:
-        app: bot-qa-test3
-    spec:
-      containers:
-        - env:
-            - name: AWSUME_EXPIRATION
-              valueFrom:
-                secretKeyRef:
-                  key: AWSUME_EXPIRATION
-                  name: aws-env
-            - name: AWS_ACCESS_KEY_ID
-              valueFrom:
-                secretKeyRef:
-                  key: AWS_ACCESS_KEY_ID
-                  name: aws-env
-            - name: AWS_DEFAULT_REGION
-              valueFrom:
-                secretKeyRef:
-                  key: AWS_DEFAULT_REGION
-                  name: aws-env
-            - name: AWS_REGION
-              valueFrom:
-                secretKeyRef:
-                  key: AWS_REGION
-                  name: aws-env
-            - name: AWS_SECRET_ACCESS_KEY
-              valueFrom:
-                secretKeyRef:
-                  key: AWS_SECRET_ACCESS_KEY
-                  name: aws-env
-            - name: AWS_SESSION_TOKEN
-              valueFrom:
-                secretKeyRef:
-                  key: AWS_SESSION_TOKEN
-                  name: aws-env
-          image: 936453233046.dkr.ecr.us-east-1.amazonaws.com/joe:test3
-          imagePullPolicy: Never
-          name: test3
-          ports:
-            - containerPort: 3000
-      imagePullSecrets:
-        - name: aws-creds
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: test3
-  namespace: default
-spec:
-  ports:
-    - port: 80
-      targetPort: 3000
-  selector:
-    app: bot-qa-test3
-  type: LoadBalancer
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: test3
-  namespace: default
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: bot-qa-test3
-  template:
-    metadata:
-      labels:
-        app: bot-qa-test3
-    spec:
-      containers:
-        - env:
-            - name: AWSUME_EXPIRATION
-              valueFrom:
-                secretKeyRef:
-                  key: AWSUME_EXPIRATION
-                  name: aws-env
-            - name: AWS_ACCESS_KEY_ID
-              valueFrom:
-                secretKeyRef:
-                  key: AWS_ACCESS_KEY_ID
-                  name: aws-env
-            - name: AWS_DEFAULT_REGION
-              valueFrom:
-                secretKeyRef:
-                  key: AWS_DEFAULT_REGION
-                  name: aws-env
-            - name: AWS_REGION
-              valueFrom:
-                secretKeyRef:
-                  key: AWS_REGION
-                  name: aws-env
-            - name: AWS_SECRET_ACCESS_KEY
-              valueFrom:
-                secretKeyRef:
-                  key: AWS_SECRET_ACCESS_KEY
-                  name: aws-env
-            - name: AWS_SESSION_TOKEN
-              valueFrom:
-                secretKeyRef:
-                  key: AWS_SESSION_TOKEN
-                  name: aws-env
-          image: 936453233046.dkr.ecr.us-east-1.amazonaws.com/joe:test3
-          imagePullPolicy: Never
-          name: test3
+          name: test4
           ports:
             - containerPort: 3000
       imagePullSecrets:
