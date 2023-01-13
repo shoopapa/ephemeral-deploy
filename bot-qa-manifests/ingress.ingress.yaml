@@ -10,6 +10,15 @@ spec:
         paths:
           - backend:
               service:
+                name: branch-name-06fc079
+                port:
+                  number: 3000
+            path: /bots/branch-name-06fc079
+            pathType: Prefix
+    - http:
+        paths:
+          - backend:
+              service:
                 name: branch-name-19fced4
                 port:
                   number: 3000
