@@ -8,7 +8,7 @@ spec:
     - port: 80
       targetPort: 3000
   selector:
-    app: bot-qa-test
+    app: bot-qa-test2
   type: LoadBalancer
 ---
 apiVersion: apps/v1
@@ -20,11 +20,11 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: bot-qa-test
+      app: bot-qa-test2
   template:
     metadata:
       labels:
-        app: bot-qa-test
+        app: bot-qa-test2
     spec:
       containers:
         - env:
@@ -58,9 +58,9 @@ spec:
                 secretKeyRef:
                   key: AWS_SESSION_TOKEN
                   name: aws-env
-          image: 936453233046.dkr.ecr.us-east-1.amazonaws.com/joe:test
+          image: 936453233046.dkr.ecr.us-east-1.amazonaws.com/joe:test2
           imagePullPolicy: Never
-          name: test
+          name: test2
           ports:
             - containerPort: 3000
       imagePullSecrets:
