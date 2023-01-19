@@ -6,7 +6,8 @@ metadata:
   name: ingress-c8490260
 spec:
   rules:
-    - http:
+    - host: hello-world.info
+      http:
         paths:
           - backend:
               service:
