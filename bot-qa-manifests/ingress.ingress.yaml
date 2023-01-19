@@ -10,6 +10,15 @@ spec:
         paths:
           - backend:
               service:
+                name: head-603c1c0-c8248daa
+                port:
+                  number: 3000
+            path: /bots/head-603c1c0-c8248daa
+            pathType: Prefix
+    - http:
+        paths:
+          - backend:
+              service:
                 name: head-603c1c0
                 port:
                   number: 3000
