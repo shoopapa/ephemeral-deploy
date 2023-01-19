@@ -10,6 +10,24 @@ spec:
         paths:
           - backend:
               service:
+                name: Deployment
+                port:
+                  number: 3000
+            path: /bots/Deployment
+            pathType: Prefix
+    - http:
+        paths:
+          - backend:
+              service:
+                name: Service
+                port:
+                  number: 3000
+            path: /bots/Service
+            pathType: Prefix
+    - http:
+        paths:
+          - backend:
+              service:
                 name: app
                 port:
                   number: 3000
