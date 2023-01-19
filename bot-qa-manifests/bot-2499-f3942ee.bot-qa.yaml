@@ -70,7 +70,7 @@ spec:
                   name: aws-env
           image: 936453233046.dkr.ecr.us-east-1.amazonaws.com/joe:BOT-2499-f3942ee
           imagePullPolicy: Always
-          name: BOT-2499-f3942ee
+          name: bot-2499-f3942ee
           ports:
             - containerPort: 3000
       imagePullSecrets:
