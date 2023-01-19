@@ -5,4 +5,13 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
   name: ingress-c8490260
 spec:
-  rules: []
+  rules:
+    - http:
+        paths:
+          - backend:
+              service:
+                name: bot-2499-f3942ee
+                port:
+                  number: 3000
+            path: /bots/bot-2499-f3942ee
+            pathType: Prefix
