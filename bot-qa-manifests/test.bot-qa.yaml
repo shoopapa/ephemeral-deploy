@@ -68,9 +68,9 @@ spec:
                 secretKeyRef:
                   key: AWS_SESSION_TOKEN
                   name: aws-env
-          image: 936453233046.dkr.ecr.us-east-1.amazonaws.com/joe:test
+          image: 936453233046.dkr.ecr.us-east-1.amazonaws.com/joe:TEST
           imagePullPolicy: Always
-          name: test
+          name: TEST
           ports:
             - containerPort: 3000
       imagePullSecrets:
