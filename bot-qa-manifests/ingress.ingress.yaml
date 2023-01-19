@@ -15,3 +15,12 @@ spec:
                   number: 3000
             path: /bots/test
             pathType: Prefix
+    - http:
+        paths:
+          - backend:
+              service:
+                name: testyeet
+                port:
+                  number: 3000
+            path: /bots/testyeet
+            pathType: Prefix
