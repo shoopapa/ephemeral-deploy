@@ -8,11 +8,4 @@ spec:
   rules:
     - host: hello-world.info
       http:
-        paths:
-          - backend:
-              service:
-                name: t-yeet
-                port:
-                  number: 80
-            path: /bots/t-yeet
-            pathType: Prefix
+        paths: []
