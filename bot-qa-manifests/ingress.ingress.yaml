@@ -8,25 +8,4 @@ spec:
   rules:
     - host: hello-world.info
       http:
-        paths:
-          - backend:
-              service:
-                name: bot-2499-f3942ee
-                port:
-                  number: 80
-            path: /bots/bot-2499-f3942ee
-            pathType: Prefix
-          - backend:
-              service:
-                name: tag1
-                port:
-                  number: 80
-            path: /bots/tag1
-            pathType: Prefix
-          - backend:
-              service:
-                name: tag2
-                port:
-                  number: 80
-            path: /bots/tag2
-            pathType: Prefix
+        paths: []
