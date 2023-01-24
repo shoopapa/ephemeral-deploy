@@ -16,3 +16,10 @@ spec:
                   number: 80
             path: /bots/bot-2499-f3942ee
             pathType: Prefix
+          - backend:
+              service:
+                name: tag1
+                port:
+                  number: 80
+            path: /bots/tag1
+            pathType: Prefix
