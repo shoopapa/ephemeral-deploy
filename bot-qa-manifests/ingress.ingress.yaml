@@ -5,4 +5,14 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /ws
   name: ingress-c8490260
 spec:
-  rules: []
+  rules:
+    - host: hello-world.info
+      http:
+        paths:
+          - backend:
+              service:
+                name: tmp
+                port:
+                  number: 80
+            path: /tmp
+            pathType: Prefix
