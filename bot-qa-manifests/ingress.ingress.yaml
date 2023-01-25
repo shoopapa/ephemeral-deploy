@@ -23,3 +23,8 @@ spec:
                   number: 80
             path: /bots/bot-2499-f3942ee
             pathType: Prefix
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: ingress-account-c8da9ab8
