@@ -26,6 +26,7 @@ spec:
 ---
 apiVersion: v1
 kind: ServiceAccount
+automountServiceAccountToken: false
 metadata:
   name: api-service-account
   namespace: devops-tools
