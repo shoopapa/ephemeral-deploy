@@ -11,8 +11,8 @@ spec:
         paths:
           - backend:
               service:
-                name: tmp
+                name: bot-2499-290a7a4
                 port:
                   number: 80
-            path: /tmp
+            path: /bots/bot-2499-290a7a4
             pathType: Prefix
